@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | ARS</title>
+    <meta name="description" content="Affordable pricing plans for our web scraping services">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .pricing-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .popular-plan {
+            border: 2px solid #2563EB;
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #2563EB;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between w-full">
+                <a href="#" class="text-2xl font-bold text-blue-600">ARS</a>
+                
+                <!-- Desktop Navigation -->
+                <nav id="menu" class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+                    <a href="pricing.html" class="text-blue-600 font-bold">Pricing</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 bg-white md:hidden">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+            <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+            <a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+            <a href="pricing.html" class="text-gray-700 hover:text-blue-600">Pricing</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            let menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Pricing Hero -->
+    <section class="text-black py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Choose the plan that fits your data needs</p>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-gray-50 p-8 rounded-lg shadow-sm transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Basic</h3>
+                    <p class="text-gray-600 mb-6">For small businesses and startups</p>
+                    <div class="text-4xl font-bold mb-6">$99<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Up to 10,000 pages/month</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 3 data sources</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Daily data updates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Email support</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> API access</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> Priority support</li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Pro Plan (Popular) -->
+                <div class="pricing-card popular-plan bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3 class="text-xl font-bold mb-2">Pro</h3>
+                    <p class="text-gray-600 mb-6">For growing businesses</p>
+                    <div class="text-4xl font-bold mb-6">$299<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Up to 50,000 pages/month</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 10 data sources</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Hourly data updates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Email & chat support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Basic API access</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> Priority support</li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-gray-50 p-8 rounded-lg shadow-sm transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large-scale data needs</p>
+                    <div class="text-4xl font-bold mb-6">Custom</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited pages</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited data sources</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Real-time data updates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 24/7 priority support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full API access</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Dedicated account manager</li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded transition duration-300">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Plan Comparison</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg overflow-hidden">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="py-4 px-6 text-left">Feature</th>
+                            <th class="py-4 px-6 text-center">Basic</th>
+                            <th class="py-4 px-6 text-center">Pro</th>
+                            <th class="py-4 px-6 text-center">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6">Monthly Pages</td>
+                            <td class="py-4 px-6 text-center">10,000</td>
+                            <td class="py-4 px-6 text-center">50,000</td>
+                            <td class="py-4 px-6 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-4 px-6">Data Sources</td>
+                            <td class="py-4 px-6 text-center">3</td>
+                            <td class="py-4 px-6 text-center">10</td>
+                            <td class="py-4 px-6 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6">Update Frequency</td>
+                            <td class="py-4 px-6 text-center">Daily</td>
+                            <td class="py-4 px-6 text-center">Hourly</td>
+                            <td class="py-4 px-6 text-center">Real-time</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <td class="py-4 px-6">Support</td>
+                            <td class="py-4 px-6 text-center">Email</td>
+                            <td class="py-4 px-6 text-center">Email & Chat</td>
+                            <td class="py-4 px-6 text-center">24/7 Priority</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6">API Access</td>
+                            <td class="py-4 px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-4 px-6 text-center">Basic</td>
+                            <td class="py-4 px-6 text-center">Full</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">Data Retention</td>
+                            <td class="py-4 px-6 text-center">30 days</td>
+                            <td class="py-4 px-6 text-center">90 days</td>
+                            <td class="py-4 px-6 text-center">1 year+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-semibold mb-3">What happens if I exceed my page limit?</h3>
+                    <p class="text-gray-600">We'll notify you when you're approaching your limit. Additional pages are charged at $0.01 per page for Basic and $0.005 per page for Pro plans. Enterprise plans have no overage charges.</p>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-semibold mb-3">Can I change plans later?</h3>
+                    <p class="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.</p>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-semibold mb-3">Is there a free trial available?</h3>
+                    <p class="text-gray-600">We offer a 7-day free trial for our Basic and Pro plans. No credit card required to start the trial.</p>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-semibold mb-3">How is billing handled?</h3>
+                    <p class="text-gray-600">We bill monthly via credit card. Annual billing options are available with a 10% discount.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">What if I need custom features?</h3>
+                    <p class="text-gray-600">Our Enterprise plan includes custom development. <a href="contact.html" class="text-blue-600 hover:underline">Contact us</a> to discuss your specific requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ARS</h3>
+                    <p class="text-gray-400">Professional web scraping services since 2025</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">E-commerce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Real Estate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Social Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">ars@gmail.com</li>
+                        <li class="text-gray-400">+91 9037579459</li>
+                        <li class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 ARS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-button').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
